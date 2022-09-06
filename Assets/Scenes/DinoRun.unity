@@ -809,12 +809,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b232f96591e8afd4590d2cb4fbb88101, type: 3}
-  m_Color: {r: 1, g: 0.5267917, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: d88ae733e43d39547b398d2894b3599d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.99215686}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 12.8, y: 7.83}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -921,7 +921,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.4528302, g: 0.15109695, b: 0, a: 1}
+  m_Color: {r: 0.17895675, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -975,7 +975,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b67d634271dbcd469f3840c8d47116c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnObject: {fileID: 645327443918784574, guid: b1905f44a14e83a4cbb6d92c8914425d, type: 3}
+  spawnObject:
+  - {fileID: 645327443918784574, guid: b1905f44a14e83a4cbb6d92c8914425d, type: 3}
   spawnPoints:
   - {fileID: 604489840}
   - {fileID: 1184551886}

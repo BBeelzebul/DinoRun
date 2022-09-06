@@ -6,7 +6,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject spawnObject;
+    public GameObject[] spawnObject;
     public GameObject[] spawnPoints;
     public float timer;
     public float timeBetweenSpawns;
@@ -34,7 +34,8 @@ public class GameManager : MonoBehaviour
         {
             timer = 0;
             int randomNumber = Random.Range(0, 3);
-            Instantiate(spawnObject, spawnPoints[randomNumber].transform.position, Quaternion.identity);
+            int n = Random.Range(0, 3);
+            GameObject prueba = Instantiate(spawnObject[n], spawnPoints[randomNumber].transform.position, Quaternion.identity);
         }
     }
 }
