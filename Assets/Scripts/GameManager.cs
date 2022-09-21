@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public float timer;
     public float timeBetweenSpawns;
 
-    public float speedMultiplaier;
+    public float speedMultiplier;
     private float distance;
 
     public TextMeshProUGUI scoreUI;
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         scoreUI.text = "Score: "+ distance.ToString("F2");
-        speedMultiplaier += Time.deltaTime * 0.1f;
+        speedMultiplier += Time.deltaTime * 0.1f;
 
         timer += Time.deltaTime;
         distance += Time.deltaTime * 0.5f;

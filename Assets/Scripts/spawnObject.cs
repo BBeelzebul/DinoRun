@@ -10,6 +10,7 @@ public class spawnObject : MonoBehaviour
     private GameManager gm;
 
     private float timer;
+
     void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
@@ -24,6 +25,6 @@ public class spawnObject : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        rb.velocity = Vector2.left * (speed + gm.speedMultiplaier);
+        rb.velocity = Vector2.left * (speed + gm.speedMultiplier);
     }
 }
