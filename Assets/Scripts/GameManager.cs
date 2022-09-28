@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject cactus1;
     public GameObject cactus2; 
     public GameObject cactus3;
-    public GameObject Circle;
+    public GameObject bird;
 
     int chooseObstacle;
 
@@ -24,11 +24,11 @@ public class GameManager : MonoBehaviour
   
     void Update()
     {
-        scoreUI.text = "Score: "+ distance.ToString("F2");
+        scoreUI.text = "Score: "+ distance.ToString("F0");
         speedMultiplier += Time.deltaTime * 0.1f;
 
         timer += Time.deltaTime;
-        distance += Time.deltaTime * 0.5f;
+        distance += Time.deltaTime * 0.8f;
 
         if (timer > timeBetweenSpawns)
         {
@@ -43,6 +43,6 @@ public class GameManager : MonoBehaviour
         if (chooseObstacle == 0) { Instantiate(cactus1); }
         if (chooseObstacle == 1) { Instantiate(cactus2); }
         if (chooseObstacle == 2) { Instantiate(cactus3); }
-        if (chooseObstacle == 3) { Instantiate(Circle); }
+        if (chooseObstacle == 3) { Instantiate(bird); }
     }
 }

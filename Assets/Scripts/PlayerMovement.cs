@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             animDio.SetTrigger("Bending");
+            animDio.SetBool("Jumping", false);
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
