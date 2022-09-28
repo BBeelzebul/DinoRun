@@ -6,8 +6,13 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject[] spawnObject;
-    public GameObject[] spawnPoints;
+    public GameObject cactus1;
+    public GameObject cactus2; 
+    public GameObject cactus3;
+    public GameObject Circle;
+
+    int chooseObstacle;
+
     public float timer;
     public float timeBetweenSpawns;
 
@@ -15,13 +20,8 @@ public class GameManager : MonoBehaviour
     private float distance;
 
     public TextMeshProUGUI scoreUI;
-    
-    void Start()
-    {
-        
-    }
-
    
+  
     void Update()
     {
         scoreUI.text = "Score: "+ distance.ToString("F2");
@@ -30,12 +30,19 @@ public class GameManager : MonoBehaviour
         timer += Time.deltaTime;
         distance += Time.deltaTime * 0.5f;
 
-        if(timer > timeBetweenSpawns)
+        if (timer > timeBetweenSpawns)
         {
             timer = 0;
-            int randomNumber = Random.Range(0, 3);
-            int n = Random.Range(0, 3);
-            GameObject prueba = Instantiate(spawnObject[n], spawnPoints[randomNumber].transform.position, Quaternion.identity);
+            GenerateObstacle();
         }
+    }
+
+    void GenerateObstacle()
+    {
+        chooseObstacle = Random.Range(0, 4);
+        if (chooseObstacle == 0) { Instantiate(cactus1); }
+        if (chooseObstacle == 1) { Instantiate(cactus2); }
+        if (chooseObstacle == 2) { Instantiate(cactus3); }
+        if (chooseObstacle == 3) { Instantiate(Circle); }
     }
 }

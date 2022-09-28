@@ -27,7 +27,14 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = false;
             animDio.SetBool("Jumping", true);
         }
-        
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            animDio.SetTrigger("Bending");
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            animDio.Play("Run");
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -38,8 +45,6 @@ public class PlayerMovement : MonoBehaviour
             animDio.SetBool("Jumping", false);
         }
     }
-
-  
 
     private void OnTriggerEnter2D(Collider2D other)
     {
