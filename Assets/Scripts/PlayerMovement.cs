@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("GameOver");
         }
     }
 
