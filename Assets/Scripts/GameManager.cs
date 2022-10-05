@@ -25,10 +25,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         scoreUI.text = "Score: "+ distance.ToString("F0");
-        speedMultiplier += Time.deltaTime * 0.1f;
+        speedMultiplier += Time.deltaTime * 0.3f;
 
         timer += Time.deltaTime;
-        distance += Time.deltaTime * 0.8f;
+        distance += Time.deltaTime * 1f;
 
         if (timer > timeBetweenSpawns)
         {

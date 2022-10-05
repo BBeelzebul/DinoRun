@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public bool isGrounded;
 
     private Animator animDio;
+
+    public TextMeshProUGUI scoreFinal;
 
     public void Awake()
     {
