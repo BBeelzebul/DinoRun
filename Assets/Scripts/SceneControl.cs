@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneControl : MonoBehaviour
 {
-    
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);

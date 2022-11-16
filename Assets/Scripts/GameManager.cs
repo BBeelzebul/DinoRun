@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,26 +16,40 @@ public class GameManager : MonoBehaviour
 
     public float timer;
     public float timeBetweenSpawns;
-
+    public float score;
+    public float highScore;
     public float speedMultiplier;
-    private float distance;
 
     public TextMeshProUGUI scoreUI;
-   
-  
+    public TextMeshProUGUI highScoreUI;
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        highScore = PlayerPrefs.GetFloat("Highscore");
+    }
+
     void Update()
     {
-        scoreUI.text = "Score: "+ distance.ToString("F0");
+        scoreUI.text = "S " + score.ToString("F0");
+        highScoreUI.text = "HS " + highScore.ToString("F0");
+
+        score += Time.deltaTime * 1f;
         speedMultiplier += Time.deltaTime * 0.3f;
 
         timer += Time.deltaTime;
-        distance += Time.deltaTime * 1f;
 
         if (timer > timeBetweenSpawns)
         {
             timer = 0;
             GenerateObstacle();
         }
+
+        if (score > highScore)
+        {
+            PlayerPrefs.SetFloat("Highscore", score);
+        }
+
     }
 
     void GenerateObstacle()
