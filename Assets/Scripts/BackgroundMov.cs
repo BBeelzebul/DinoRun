@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.TextCore.LowLevel;
 
 public class BackgroundMov : MonoBehaviour
+
 {
     public int offsetX = -8;
 
